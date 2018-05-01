@@ -26,4 +26,16 @@
 }
 
 
+- (IBAction)DismissKeyboard:(id)sender {
+    self.Label1.text = self.textField.text;
+    [self resignFirstResponder];
+}
+
+- (IBAction)IfButton:(id)sender {
+    if ([self.Label1.text isEqualToString:@"Hello"]) {
+        self.Label2.text = @"How are you?";
+    } else {
+        self.Label2.text = @"Go away!";
+    }
+}
 @end
